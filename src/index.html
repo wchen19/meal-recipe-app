@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Recipe App</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@700&family=Nunito+Sans:wght@300;400;600&display=swap');
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Meal Recipe</h1>
+    </header>
+    <main>
+        
+        <!-- Expanded Card -->
+        <div class="modal" hidden>
+            <expanded-card></expanded-card>
+        </div>
+        
+        <div class="flex-col">
+            <!-- Top Bar -->
+            <div class="flex-row top-bar">
+                <search-bar></search-bar>
+                <div class="filter category">
+                    <button class="filter-category">Category</button>
+                    <div class="dropdown">
+                        <ul class="drop-list" id="dropdown-category">
+                            <dropdown-category></dropdown-category>
+                        </ul>
+                    </div>
+                </div>
+                <div class="filter country">
+                    <button class="filter-country">Country</button>
+                    <div class="dropdown">
+                        <ul class="drop-list" id="dropdown-country">
+                            <dropdown-country></dropdown-country>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Recommendation -->
+            <div class="menu recommendation" id="recommendation">
+                <h2>Recommended Menu</h2>
+                <recommendation-menu></recommendation-menu>
+            </div>
+            
+            <!-- Result -->
+            <div class="menu result" id="result" hidden>
+                <h2>Search Result</h2>
+                <result-menu></result-menu>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
